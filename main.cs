@@ -32,9 +32,10 @@ class MainClass {
    
     Console.WriteLine (" You deposited " +Q+ " quarter(s), " +D+ " dime(s), " +N+ " nickle(s), and " +P+ " Penny(s)");
 
-    Console.WriteLine ("But, for our services we take a fee of 10.9%");
+    Console.WriteLine ("But for our services we charge a fee of 10.9%");
 
-    FinalMoney = (Money - (Money*0.109)/100);
+    FinalMoney = (Money*0.01) - ((Money*0.01)*0.109);
+    FinalMoney = Math.Round(FinalMoney, 2);
 
-    Console.WriteLine ("After my fee, you get a voucher for " +FinalMoney+ " Thank you, have a nice day.");  }
+    Console.WriteLine ("After my fee, you get a voucher for $" +FinalMoney+ " Thank you, have a nice day.");  }
 }
